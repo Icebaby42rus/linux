@@ -1,26 +1,111 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <img alt="fs" src="./assets/fs-linux.png" />
+    <ul>
+      <li>/bin – в этой директории содержатся исполняемые файлы</li>
+      <li>/boot — здесь содержатся файлы загрузчика grub</li>
+      <li>/dev — специальные файлы для работы с драйверами ядра</li>
+      <li>/etc – конфигурационные файлы для утилит и программ</li>
+      <li>
+        /home – место, где живут ваши личные файлы, имя входа в систему Pavel, соответственно мои файлы будут храниться в /home/pavel/.
+      </li>
+      <li>/lib – директория для библиотек, которые используют все остальные программы</li>
+      <li>/media — сюда автоматически монтируются различные USB накопители и оптические диски</li>
+      <li>/mnt — в эту директорию, обычно вручную, с помощью утилиты «mount» монтируются USB – устройства</li>
+      <li>/opt – Опциональное место для больших программных пакетов.</li>
+      <li>/proc – Информация о системных процессах (запущенных программах) и оборудовании</li>
+      <li>
+        /root — директория суперпользователя. Можно сказать, что директория /root ничем не отличается от /home, но её содержание
+        предназначено исключительно для суперпользователя. Расположена она в корне и нужна для того, что бы была возможность залогиниться
+        под правами суперпользователя и решить какие-либо проблемы, в случае невозможности примонтирования домашнего каталога
+      </li>
+      <li>/run —система для запуска дистрибутива Linux</li>
+      <li>/sbin – Основные системные программы для настройки и администрирования системы.</li>
+      <li>/selinux — Псевдо-файловая система, содержащая команды, которые наиболее часто используются ядром подсистемы</li>
+      <li>/srv — Директория, содержащая специфические файлы. Обычно этот каталог пуст.</li>
+      <li>/sys — Здесь хранятся информация о подключенных устройствах и драйверах в системе</li>
+      <li>/tmp – Временные файлы, созданные программами</li>
+      <li>/usr – Основное место установки программ.</li>
+      <li>/var – Переменные файлы, т.е. файлы с частым изменением (такие как файлы журналов)</li>
+      <li>/lost+found – здесь сохраняются файлы, восстановленные после краха системы</li>
+    </ul>
+
+    <hr />
+
+    <div>
+      <p>
+        Знак доллара ( $) говорит о том, что терминал готов принимать ваши команды от обычного пользователя. А знак решетка (#) появляется в
+        том случае, когда вы получили права суперпользователя ROOT.
+      </p>
+    </div>
+
+    <hr />
+
+    <div>
+      <h3>Команды APT(Advanced Package Tool):</h3>
+      <ul>
+        <li><strong>sudo apt-get update</strong> : Обновление базы данных пакетов</li>
+        <li><strong>sudo apt-get upgrade </strong>: Обновление установленных пакетов</li>
+        <li><strong>sudo apt-get install имя_пакета </strong> : Установка нового пакета</li>
+        <li><strong>sudo apt-get remove имя_пакета</strong> : Удалить файлы пакета</li>
+        <li><strong>sudo apt-get purge имя_пакета</strong> : Удалить все, что связано с пакетом</li>
+        <li><strong>sudo apt-get clean</strong> : Очистка кэша локально сохраненных файлов</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div>
+      <h3>Просмотр файлов и перемещение по диску в терминале Linux:</h3>
+      <ul>
+        <li><strong>$ ls </strong>: означает «list files» (список файлов) и показывает файлы в текущей директории, где Вы находитесь</li>
+        <li>
+          <strong>$ ls -lh </strong>: означает выполнить команду ls, так чтобы она показала список файлов и информацию об их размерах.
+        </li>
+        <li><strong>$ cd ~/ </strong>: означает, что нужно перейти в домашний каталог текущего пользователя</li>
+
+        <hr />
+
+        <li><strong>$ cp file1.txt file2.txt </strong>: означает, скопировать содержимое из file1.txt в file2.txt</li>
+        <li><strong>$ cp file.txt ~/Документы </strong>: означает, скопировать file1.txt в другую директорию</li>
+
+        <hr />
+
+        <li><strong>$ mv file.txt ~/Документы </strong>: означает, перемещение file.txt в домашнюю папку - Шаблоны</li>
+        <li><strong>$ cp file.txt newfile.txt </strong>: означает, переименование file1.txt в newfile.txt</li>
+
+        <li><strong>$ rm file1.txt file2.txt </strong>: означает, удалить файлы file1.txt в file2.txt</li>
+        <li><strong>$ rm -r mydir </strong>: означает, удалить директорию</li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-};
+  export default {
+    name: 'App',
+  };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+    font-size: 18px;
+  }
+  ul {
+    text-align: left;
+    font-size: 16px;
+  }
+  p {
+    text-align: left;
+    font-size: 16px;
+  }
+  img {
+    max-width: 100%;
+  }
 </style>
